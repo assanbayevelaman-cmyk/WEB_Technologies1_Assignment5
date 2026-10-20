@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <script>
+            const userProfile = {
+                name: "Yelaman",
+                birthYear: 2008,
+                isDeveloper: true,
+                hobbies: ["reading", "gaming", "programming"]
+            };
+        </script>
+    </head>
+    <body>
+        <form id="form1">
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" required><br>
+            <label for="birthYear">Birth Year:</label><br>
+            <input type="number" id="birthYear" required><br>
+            <button type="submit">Create / Update Profile</button>
+        </form>
+        <form id="addForm">
+            <ul id="hobbiesList"></ul>
+            <label for="item">Item:</label><br>
+            <input type="text" id="item"><br>
+            <button type="submit">Add Item</button><br>
+        </form>
+        <form id="removeForm">
+            <button type="submit">Remove Item</button><br>
+        </form>
+        <script>
+            const form = document.getElementById('form1');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+                userProfile.name = document.getElementById('username').value;
+                userProfile.birthYear = Number(document.getElementById('birthYear').value);
+                const currentYear = new Date().getFullYear();
+                const age = currentYear - userProfile.birthYear;
+                const months = age * 12;
+                const hobbiesCount = userProfile.hobbies.length;
+                console.log("Profile:", userProfile);
+                console.log("Age:", age);
+                console.log("Months old:", months);
+                console.log("Number of hobbies:", hobbiesCount);
+            })
+            const ul = document.getElementById('hobbiesList');
+            document.getElementById('addForm').addEventListener('submit', (event) => {
+                event.preventDefault();
+                const li = document.createElement('li');
+                li.textContent = document.getElementById('item').value;
+                ul.appendChild(li);
+            })
+            document.getElementById('removeForm').addEventListener('submit', (event) => {
+                event.preventDefault();
+                if (ul.lastElementChild) ul.removeChild(ul.lastElementChild);
+            })
+        </script>
+    </body>
+</html>
