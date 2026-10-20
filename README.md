@@ -13,7 +13,7 @@ Created a const object `userProfile` with a string (`name`), number (`birthYear`
 
 Calculated age dynamically (`currentYear - birthYear`), months old (`age * 12`), and hobbies count (`.length`).
 
-![](screenshots/web5_1.png)
+![](screenshots/web5_4.png)
 
 ## Part 2. Form Input & Event Responses
 
@@ -25,7 +25,7 @@ Created a form with Username, Birth Year, and "Create / Update Profile" submit b
 
 Added a `submit` event listener to the form. On submit, it captures the user's input values and updates the `userProfile` object.
 
-![](screenshots/web5_2.png)
+![](screenshots/web5_1.png)
 
 ## Part 3. DOM List Manipulation
 
@@ -33,8 +33,10 @@ Added a `submit` event listener to the form. On submit, it captures the user's i
 
 `<ul>` of hobbies. Add Item creates an `<li>` from an input. Remove Item deletes the last `<li>`
 
-![](screenshots/web5_3.png)
+![](screenshots/web5_2.png)
 
 ## Summary
 
 Built an object, made arithmetic calculations, added forms and inputs, added an event listener to the button, created `<ul>` with add/remove handlers.
+
+![](screenshots/web5_3.png)
